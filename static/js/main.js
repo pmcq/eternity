@@ -112,3 +112,13 @@ function checkArrow() {
 }
 
 checkArrow();
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    let element = document.getElementById('embed-iframe');
+    let options = {
+        uri: 'spotify:album:5ibUzKH2KmIv040STFsEfp'
+      };
+    let callback = (EmbedController) => {};
+    IFrameAPI.createController(element, options, callback);
+  };
+  
